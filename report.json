@@ -1,0 +1,62 @@
+{
+  "target": "https://httpbin.org",
+  "total_findings": 7,
+  "findings": [
+    {
+      "check": "Missing Security Header",
+      "severity": "HIGH",
+      "detail": "Missing HSTS header. Site is vulnerable to protocol downgrade attacks.",
+      "evidence": "Header 'Strict-Transport-Security' absent from response",
+      "remediation": "Add: Strict-Transport-Security: max-age=31536000; includeSubDomains",
+      "owasp": "A05:2021 Security Misconfiguration"
+    },
+    {
+      "check": "Missing Security Header",
+      "severity": "HIGH",
+      "detail": "Missing CSP header. Site is vulnerable to XSS and data injection attacks.",
+      "evidence": "Header 'Content-Security-Policy' absent from response",
+      "remediation": "Implement a Content Security Policy restricting resource loading.",
+      "owasp": "A05:2021 Security Misconfiguration"
+    },
+    {
+      "check": "Missing Security Header",
+      "severity": "MEDIUM",
+      "detail": "Missing X-Content-Type-Options header. Browser may MIME-sniff responses.",
+      "evidence": "Header 'X-Content-Type-Options' absent from response",
+      "remediation": "Add: X-Content-Type-Options: nosniff",
+      "owasp": "A05:2021 Security Misconfiguration"
+    },
+    {
+      "check": "Missing Security Header",
+      "severity": "MEDIUM",
+      "detail": "Missing X-Frame-Options header. Site may be vulnerable to clickjacking.",
+      "evidence": "Header 'X-Frame-Options' absent from response",
+      "remediation": "Add: X-Frame-Options: DENY",
+      "owasp": "A05:2021 Security Misconfiguration"
+    },
+    {
+      "check": "Missing Security Header",
+      "severity": "LOW",
+      "detail": "Missing Permissions-Policy header. Browser features are unrestricted.",
+      "evidence": "Header 'Permissions-Policy' absent from response",
+      "remediation": "Add a Permissions-Policy header restricting access to browser features.",
+      "owasp": "A05:2021 Security Misconfiguration"
+    },
+    {
+      "check": "Missing Security Header",
+      "severity": "LOW",
+      "detail": "Missing Referrer-Policy header. Sensitive URL data may leak to third parties.",
+      "evidence": "Header 'Referrer-Policy' absent from response",
+      "remediation": "Add: Referrer-Policy: strict-origin-when-cross-origin",
+      "owasp": "A05:2021 Security Misconfiguration"
+    },
+    {
+      "check": "CORS Misconfiguration",
+      "severity": "CRITICAL",
+      "detail": "Server reflects arbitrary origin in CORS header. Credentials allowed \u2014 attacker can make authenticated cross-origin requests.",
+      "evidence": "Access-Control-Allow-Origin: https://evil-attacker.com, Allow-Credentials: true",
+      "remediation": "Validate Origin header against a strict server-side allowlist. Never reflect arbitrary origins.",
+      "owasp": "A05:2021 Security Misconfiguration"
+    }
+  ]
+}
