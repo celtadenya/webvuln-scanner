@@ -25,7 +25,7 @@ Install dependencies and run against any target:
 
 Scanned https://httpbin.org and found 7 real vulnerabilities including a CRITICAL CORS misconfiguration where the server reflects arbitrary origins with credentials allowed. An attacker can make authenticated cross-origin requests from any domain.
 <img width="847" height="419" alt="Screenshot 2026-06-04 at 23 09 58" src="https://github.com/user-attachments/assets/8340ff26-5268-4d8c-b9a7-1e3e79cd6dc7" />
-<img width="676" height="456" alt="Screenshot 2026-06-04 at 23 10 10" src="https://github.com/user-attachments/assets/cc27bfbc-f19b-4f87-8377-afeda2d6c22a" />
+<img width="671" height="398" alt="Screenshot 2026-06-04 at 23 10 10" src="https://github.com/user-attachments/assets/54ba0d02-a0bd-49c3-88c7-c75cad7967b5" />
 <img width="859" height="422" alt="Screenshot 2026-06-04 at 23 10 24" src="https://github.com/user-attachments/assets/4d513e25-5add-4aa6-9b37-3fc4fec4e63d" />
 
 
